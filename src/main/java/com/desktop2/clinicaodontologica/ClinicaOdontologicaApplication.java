@@ -19,12 +19,6 @@ public class ClinicaOdontologicaApplication implements CommandLineRunner {
 
 	@Override
 	public void run(String... args) throws Exception {
-		Paciente paciente = new Paciente();
-		paciente.setNome("Paciente");
-		paciente.setCpf("12345678901"); // CPF com exatamente 11 caracteres
-		paciente.setTipo("estranho");
 
-		String result = pacienteController.newPaciente(paciente);
-		System.out.println(result);
 	}
 }

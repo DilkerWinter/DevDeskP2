@@ -1,15 +1,20 @@
 package com.desktop2.clinicaodontologica.Model;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 
 @Entity
 @Table(name = "cidade")
 public class Cidade {
 
-    @Column(nullable = false)
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Integer id;
+
+    @Column(nullable = false, unique = true)
     private String nome;
 
+    @ManyToOne
+    @JoinColumn(name = "uf_sigla", referencedColumnName = "sigla")
+    private Uf uf;
 
 }

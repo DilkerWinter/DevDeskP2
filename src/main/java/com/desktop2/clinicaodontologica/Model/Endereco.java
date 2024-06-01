@@ -19,6 +19,10 @@ public class Endereco {
     @Column(nullable = false)
     private String numero;
 
+    @ManyToOne
+    @JoinColumn(name = "cidade_id", referencedColumnName = "id")
+    private Cidade cidade;
+
 
 
 }

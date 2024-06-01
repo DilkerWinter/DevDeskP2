@@ -13,7 +13,6 @@ public class Paciente {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
-
     @Column(nullable = false)
     private String nome;
 
@@ -23,6 +22,8 @@ public class Paciente {
     @Column(nullable = false)
     private Date dataNascimento;
 
-
+    @ManyToOne
+    @JoinColumn(name = "endereco", referencedColumnName = "id")
+    private Endereco endereco;
 
 }
