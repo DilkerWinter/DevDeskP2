@@ -1,6 +1,7 @@
 package com.desktop2.clinicaodontologica.Model.Paciente;
 
 
+import com.desktop2.clinicaodontologica.Model.Paciente.Contato.Contato;
 import com.desktop2.clinicaodontologica.Model.Paciente.Endereco.Endereco;
 import jakarta.persistence.*;
 
@@ -26,6 +27,12 @@ public class Paciente {
     @ManyToOne
     @JoinColumn(name = "endereco", referencedColumnName = "id")
     private Endereco endereco;
+
+    @ManyToOne
+    @JoinColumn(name = "contato", referencedColumnName = "id")
+    private Contato contato;
+
+
 
     public Integer getId() {
         return id;
@@ -65,5 +72,12 @@ public class Paciente {
 
     public void setEndereco(Endereco endereco) {
         this.endereco = endereco;
+    }
+
+    public Contato getContato() {
+        return contato;
+    }
+    public void setContato(Contato contato) {
+        this.contato = contato;
     }
 }
