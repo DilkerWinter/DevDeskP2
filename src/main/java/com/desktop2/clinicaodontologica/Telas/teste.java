@@ -1,5 +1,5 @@
 package com.desktop2.clinicaodontologica.Telas;
 
-public class TelaPrincipal {
+public class teste {
 
 }
