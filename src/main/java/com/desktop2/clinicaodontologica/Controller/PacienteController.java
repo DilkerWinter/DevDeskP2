@@ -1,6 +1,6 @@
 package com.desktop2.clinicaodontologica.Controller;
 
-import com.desktop2.clinicaodontologica.Model.Paciente;
+import com.desktop2.clinicaodontologica.Model.Paciente.Paciente;
 import com.desktop2.clinicaodontologica.Service.PacienteService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;

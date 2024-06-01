@@ -1,4 +1,4 @@
-package com.desktop2.clinicaodontologica.Model;
+package com.desktop2.clinicaodontologica.Model.Paciente.Endereco;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -12,4 +12,12 @@ public class Uf {
     @Id
     @Column
     private String sigla;
+
+    public String getSigla() {
+        return sigla;
+    }
+
+    public void setSigla(String sigla) {
+        this.sigla = sigla;
+    }
 }
