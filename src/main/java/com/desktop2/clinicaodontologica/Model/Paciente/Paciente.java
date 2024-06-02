@@ -22,9 +22,9 @@ public class Paciente {
     private String cpf;
 
     @Column(nullable = false)
-    private Date dataNascimento;
+    private Date datanascimento;
 
-    @ManyToOne
+    @OneToOne
     @JoinColumn(name = "endereco", referencedColumnName = "id")
     private Endereco endereco;
 
@@ -58,12 +58,12 @@ public class Paciente {
         this.cpf = cpf;
     }
 
-    public Date getDataNascimento() {
-        return dataNascimento;
+    public Date getDatanascimento() {
+        return datanascimento;
     }
 
-    public void setDataNascimento(Date dataNascimento) {
-        this.dataNascimento = dataNascimento;
+    public void setDatanascimento(Date datanascimento) {
+        this.datanascimento = datanascimento;
     }
 
     public Endereco getEndereco() {
