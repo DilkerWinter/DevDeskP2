@@ -2,7 +2,10 @@ package com.desktop2.clinicaodontologica;
 
 import com.desktop2.clinicaodontologica.Controller.ContatoController;
 import com.desktop2.clinicaodontologica.Controller.EnderecoController;
+import com.desktop2.clinicaodontologica.Controller.FuncionarioController;
 import com.desktop2.clinicaodontologica.Controller.PacienteController;
+import com.desktop2.clinicaodontologica.Model.Funcionario.Cargo;
+import com.desktop2.clinicaodontologica.Model.Funcionario.Funcionario;
 import com.desktop2.clinicaodontologica.Model.Paciente.Contato.Contato;
 import com.desktop2.clinicaodontologica.Model.Paciente.Contato.TipoContato;
 import com.desktop2.clinicaodontologica.Model.Paciente.Endereco.Cidade;
@@ -26,6 +29,8 @@ public class ClinicaOdontologicaApplication implements CommandLineRunner {
 	private EnderecoController enderecoController;
     @Autowired
     private ContatoController contatoController;
+	@Autowired
+	private FuncionarioController funcionarioController;
 
 
 	public static void main(String[] args) {
@@ -34,7 +39,9 @@ public class ClinicaOdontologicaApplication implements CommandLineRunner {
 
 	@Override
 	public void run(String... args) throws Exception {
-		List<Paciente> pacientes = pacienteController.getAllPacientes();
+
+		//LISTAR TODOS OS PACIENTES
+		/*List<Paciente> pacientes = pacienteController.getAllPacientes();
 		for (Paciente paciente : pacientes) {
 			System.out.println("-------------- Paciente --------------");
 			System.out.println("Nome: " + paciente.getNome());
@@ -51,11 +58,12 @@ public class ClinicaOdontologicaApplication implements CommandLineRunner {
 			System.out.println("Numero: " + paciente.getEndereco().getNumero());
 			System.out.println();
 		}
+		 */
 
 
 
 		 // ADICIONANDO NOVO PACIENTE
-		/*Paciente novoPaciente = new Paciente();
+		Paciente novoPaciente = new Paciente();
 		novoPaciente.setNome("Arthur");
 		novoPaciente.setCpf("11111111111");
 		novoPaciente.setDatanascimento(Date.valueOf("2004-05-23"));
@@ -71,7 +79,7 @@ public class ClinicaOdontologicaApplication implements CommandLineRunner {
 		novoEndereco.setCidade(novoCidade);
 
 		Contato novoContato = new Contato();
-		novoContato.setInformacao("Arthur@gmail.com");
+		novoContato.setInformacao("Arthur@.com");
 
 		TipoContato novoTipoContato = new TipoContato();
 		novoTipoContato.setTipo("email");
@@ -85,7 +93,23 @@ public class ClinicaOdontologicaApplication implements CommandLineRunner {
 		enderecoController.newCidade(novoCidade);
 		enderecoController.newEndereco(novoEndereco);
 		pacienteController.newPaciente(novoPaciente);
-		*/
+
+
+
+		//CADASTRAR NOVO FUNCIONARIO
+		/*Funcionario novoFuncionario = new Funcionario();
+		novoFuncionario.setNome("Pedro Antonio");
+
+		Cargo novoCargo = new Cargo();
+		novoCargo.setCargo("Recepcionista");
+		novoFuncionario.setCargo(novoCargo);
+
+		novoFuncionario.setUsuario("Pedrinho");
+		novoFuncionario.setSenha("123");
+
+		funcionarioController.newFuncionario(novoFuncionario);
+*/
+
 
 
 	}

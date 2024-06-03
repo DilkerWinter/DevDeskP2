@@ -3,6 +3,7 @@ package com.desktop2.clinicaodontologica.Model.Funcionario;
 
 import com.desktop2.clinicaodontologica.Model.Paciente.Contato.Contato;
 import com.desktop2.clinicaodontologica.Model.Paciente.Endereco.Endereco;
+import com.desktop2.clinicaodontologica.Model.Paciente.Endereco.Uf;
 import jakarta.persistence.*;
 
 import java.sql.Date;
@@ -18,10 +19,11 @@ public class Funcionario {
     @Column(nullable = false)
     private String nome;
 
-    @Column(nullable = false)
-    private String cargo;
+    @ManyToOne
+    @JoinColumn(name = "cargo", referencedColumnName = "cargo")
+    private Cargo cargo;
 
-    @Column(nullable = false)
+    @Column(nullable = false, unique = true)
     private String usuario;
 
     @Column(nullable = false)
@@ -43,11 +45,11 @@ public class Funcionario {
         this.nome = nome;
     }
 
-    public String getCargo() {
+    public Cargo getCargo() {
         return cargo;
     }
 
-    public void setCargo(String cargo) {
+    public void setCargo(Cargo cargo) {
         this.cargo = cargo;
     }
 
