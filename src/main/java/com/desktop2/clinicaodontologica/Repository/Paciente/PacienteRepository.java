@@ -1,4 +1,4 @@
-package com.desktop2.clinicaodontologica.Repository;
+package com.desktop2.clinicaodontologica.Repository.Paciente;
 
 import com.desktop2.clinicaodontologica.Model.Paciente.Paciente;
 import org.springframework.data.jpa.repository.JpaRepository;
