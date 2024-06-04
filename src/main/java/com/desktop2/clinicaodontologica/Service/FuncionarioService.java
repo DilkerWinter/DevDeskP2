@@ -1,7 +1,9 @@
 package com.desktop2.clinicaodontologica.Service;
 
+import com.desktop2.clinicaodontologica.Model.Funcionario.Cargo;
 import com.desktop2.clinicaodontologica.Model.Funcionario.Funcionario;
 import com.desktop2.clinicaodontologica.Model.Paciente.Paciente;
+import com.desktop2.clinicaodontologica.Repository.Funcionario.CargoRepository;
 import com.desktop2.clinicaodontologica.Repository.Funcionario.FuncionarioRepository;
 import com.desktop2.clinicaodontologica.Repository.Paciente.PacienteRepository;
 import com.desktop2.clinicaodontologica.Service.Assets.Login;
@@ -15,10 +17,12 @@ import java.util.Optional;
 @Service
 public class FuncionarioService {
     private final FuncionarioRepository funcionarioRepository;
+    private final CargoRepository cargoRepository;
 
     @Autowired
-    public FuncionarioService(FuncionarioRepository funcionarioRepository) {
+    public FuncionarioService(FuncionarioRepository funcionarioRepository, CargoRepository cargoRepository) {
         this.funcionarioRepository= funcionarioRepository;
+        this.cargoRepository = cargoRepository;
     }
 
     public String newFuncionario(Funcionario funcionario) {
@@ -42,5 +46,10 @@ public class FuncionarioService {
 
     public List<Funcionario> getAllFuncionarios() {
         return funcionarioRepository.findAll();
+    }
+
+    public String newCargo(Cargo cargo) {
+        cargoRepository.save(cargo);
+        return "Cargo cadastrado com sucesso!";
     }
 }

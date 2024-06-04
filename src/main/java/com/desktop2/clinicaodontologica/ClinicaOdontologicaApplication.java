@@ -63,7 +63,7 @@ public class ClinicaOdontologicaApplication implements CommandLineRunner {
 
 
 		 // ADICIONANDO NOVO PACIENTE
-		Paciente novoPaciente = new Paciente();
+		/*Paciente novoPaciente = new Paciente();
 		novoPaciente.setNome("Arthur");
 		novoPaciente.setCpf("11111111111");
 		novoPaciente.setDatanascimento(Date.valueOf("2004-05-23"));
@@ -93,11 +93,11 @@ public class ClinicaOdontologicaApplication implements CommandLineRunner {
 		enderecoController.newCidade(novoCidade);
 		enderecoController.newEndereco(novoEndereco);
 		pacienteController.newPaciente(novoPaciente);
-
+		*/
 
 
 		//CADASTRAR NOVO FUNCIONARIO
-		/*Funcionario novoFuncionario = new Funcionario();
+		Funcionario novoFuncionario = new Funcionario();
 		novoFuncionario.setNome("Pedro Antonio");
 
 		Cargo novoCargo = new Cargo();
@@ -107,8 +107,9 @@ public class ClinicaOdontologicaApplication implements CommandLineRunner {
 		novoFuncionario.setUsuario("Pedrinho");
 		novoFuncionario.setSenha("123");
 
+		funcionarioController.newCargo(novoCargo);
 		funcionarioController.newFuncionario(novoFuncionario);
-*/
+
 
 
 
