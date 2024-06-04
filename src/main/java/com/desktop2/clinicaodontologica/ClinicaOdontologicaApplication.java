@@ -13,11 +13,13 @@ import com.desktop2.clinicaodontologica.Model.Paciente.Endereco.Endereco;
 import com.desktop2.clinicaodontologica.Model.Paciente.Endereco.Uf;
 import com.desktop2.clinicaodontologica.Model.Paciente.Paciente;
 import com.desktop2.clinicaodontologica.Repository.Funcionario.CargoRepository;
+import com.desktop2.clinicaodontologica.Telas.testeJF;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+import javax.swing.*;
 import java.sql.Date;
 import java.util.List;
 
@@ -32,6 +34,7 @@ public class ClinicaOdontologicaApplication implements CommandLineRunner {
     private ContatoController contatoController;
 	@Autowired
 	private FuncionarioController funcionarioController;
+
 
 
 	public static void main(String[] args) {
@@ -110,13 +113,14 @@ public class ClinicaOdontologicaApplication implements CommandLineRunner {
 		*/
 
 		//LISTAR TODOS OS FUNCIONARIOS
-		List<Funcionario> funcionarios = funcionarioController.getAllFuncionario();
+		/*List<Funcionario> funcionarios = funcionarioController.getAllFuncionario();
 		for (Funcionario funcionario : funcionarios) {
 
 			System.out.println(funcionario.getNome());
 			System.out.println(funcionario.getSenha());
 			System.out.println(funcionario.getCargo().getCargo());
-		}
+		}*/
+
 
 
 	}
