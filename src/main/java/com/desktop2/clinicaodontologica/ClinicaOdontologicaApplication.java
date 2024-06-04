@@ -110,14 +110,13 @@ public class ClinicaOdontologicaApplication implements CommandLineRunner {
 		*/
 
 		//LISTAR TODOS OS FUNCIONARIOS
-		/*List<Funcionario> funcionarios = funcionarioController.getAllFuncionario();
+		List<Funcionario> funcionarios = funcionarioController.getAllFuncionario();
 		for (Funcionario funcionario : funcionarios) {
 
 			System.out.println(funcionario.getNome());
 			System.out.println(funcionario.getSenha());
-		}*/
-
-
+			System.out.println(funcionario.getCargo().getCargo());
+		}
 
 
 	}
