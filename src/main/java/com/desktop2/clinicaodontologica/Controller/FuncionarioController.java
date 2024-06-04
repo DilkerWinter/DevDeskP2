@@ -35,4 +35,8 @@ public class FuncionarioController {
     public String newCargo(Cargo cargo) {
         return funcionarioService.newCargo(cargo);
     }
+
+    public String addCargoExistente(Funcionario funcionario, String cargo) {
+        return funcionarioService.addCargoExistente(funcionario, cargo);
+    }
 }

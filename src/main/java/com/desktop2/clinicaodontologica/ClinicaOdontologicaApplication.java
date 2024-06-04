@@ -12,6 +12,7 @@ import com.desktop2.clinicaodontologica.Model.Paciente.Endereco.Cidade;
 import com.desktop2.clinicaodontologica.Model.Paciente.Endereco.Endereco;
 import com.desktop2.clinicaodontologica.Model.Paciente.Endereco.Uf;
 import com.desktop2.clinicaodontologica.Model.Paciente.Paciente;
+import com.desktop2.clinicaodontologica.Repository.Funcionario.CargoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
@@ -100,14 +101,11 @@ public class ClinicaOdontologicaApplication implements CommandLineRunner {
 		Funcionario novoFuncionario = new Funcionario();
 		novoFuncionario.setNome("Pedro Antonio");
 
-		Cargo novoCargo = new Cargo();
-		novoCargo.setCargo("Recepcionista");
-		novoFuncionario.setCargo(novoCargo);
+		funcionarioController.addCargoExistente(novoFuncionario, "Recepcionista");
 
 		novoFuncionario.setUsuario("Pedrinho");
 		novoFuncionario.setSenha("123");
 
-		funcionarioController.newCargo(novoCargo);
 		funcionarioController.newFuncionario(novoFuncionario);
 
 
