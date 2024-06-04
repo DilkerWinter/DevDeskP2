@@ -98,7 +98,7 @@ public class ClinicaOdontologicaApplication implements CommandLineRunner {
 
 
 		//CADASTRAR NOVO FUNCIONARIO
-		Funcionario novoFuncionario = new Funcionario();
+		/*Funcionario novoFuncionario = new Funcionario();
 		novoFuncionario.setNome("Pedro Antonio");
 
 		funcionarioController.addCargoExistente(novoFuncionario, "Recepcionista");
@@ -107,6 +107,15 @@ public class ClinicaOdontologicaApplication implements CommandLineRunner {
 		novoFuncionario.setSenha("123");
 
 		funcionarioController.newFuncionario(novoFuncionario);
+		*/
+
+		//LISTAR TODOS OS FUNCIONARIOS
+		/*List<Funcionario> funcionarios = funcionarioController.getAllFuncionario();
+		for (Funcionario funcionario : funcionarios) {
+
+			System.out.println(funcionario.getNome());
+			System.out.println(funcionario.getSenha());
+		}*/
 
 
 
